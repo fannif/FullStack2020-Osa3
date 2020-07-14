@@ -1,0 +1,7 @@
+POST https://intelligent-maison-96511.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Testi Henkilo", 
+    "number": "0123456789"
+}
