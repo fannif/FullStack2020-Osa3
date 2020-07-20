@@ -90,24 +90,6 @@ const getRandomInt = (max) => {
 app.post('/api/persons', (request, response, next) => {
     const body = request.body
 
-    if (persons.map(person => person.name).includes(body.name)) {
-        return response.status(400).json({ 
-          error: 'Name already exists' 
-        })
-    }
-    
-    if (!body.name) {
-      return response.status(400).json({ 
-        error: 'Name is missing' 
-      })
-    }
-
-    if (!body.number) {
-        return response.status(400).json({ 
-          error: 'Number is missing' 
-        })
-    }
-
     const person = new Person({
       name: body.name,
       number: body.number,
