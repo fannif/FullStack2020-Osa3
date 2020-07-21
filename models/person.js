@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
@@ -16,16 +18,16 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   })
 
 const personSchema = new mongoose.Schema({
-    name: 
-      { type: String, 
-        required: true, 
+  name:
+      { type: String,
+        required: true,
         minlength: 3,
-        unique: true 
+        unique: true
       },
-    number: 
-      { type: String, 
+  number:
+      { type: String,
         minlength: 8,
-        required: true 
+        required: true
       }
 })
 
